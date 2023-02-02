@@ -1,4 +1,6 @@
 ### docker-compose.yml ###
+## Access the jupyterlab instance at:
+## https://${HOSTNAME}:8081/${PROJECTSLUG}/lab
 
 version: "3.7"
 
@@ -7,3 +9,7 @@ services:
     extends:
       file: ${JUPYTER_SERVICE}
       service: jupyter
+
+networks:
+  caddy:
+    external: true
