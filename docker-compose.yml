@@ -11,5 +11,5 @@ services:
       service: jupyter
 
 networks:
-  caddy:
+  tanspaces:
     external: true
