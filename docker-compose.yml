@@ -1,6 +1,6 @@
 ### docker-compose.yml ###
 ## Access the jupyterlab instance at:
-## https://${HOSTNAME}:8081/${COMPOSE_PROJECT_NAME}/lab
+## https://${HOSTNAME}:8081/tanspaces.${COMPOSE_PROJECT_NAME}/lab
 
 version: "3.7"
 
@@ -9,6 +9,10 @@ services:
     extends:
       file: ${JUPYTER_SERVICE}
       service: jupyter
+    labels:
+      caddy: localhost:8081, ${HOSTNAME}:8081
+      caddy.reverse_proxy_0: /tanspaces.${COMPOSE_PROJECT_NAME}* "{{upstreams 8888}}"
+      caddy.tls: "internal"
 
 networks:
   tanspaces:
