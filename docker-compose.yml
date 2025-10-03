@@ -2,8 +2,6 @@
 ## Access the jupyterlab instance at:
 ## https://${HOSTNAME}:8081/tanspaces.${COMPOSE_PROJECT_NAME}/lab
 
-version: "3.7"
-
 services:
   workspace:
     extends:
