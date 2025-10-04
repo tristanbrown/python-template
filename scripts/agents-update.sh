@@ -6,10 +6,7 @@ REMOTE_URL=git@github.com:tristanbrown/agent-instructions.git
 PREFIX_DIR=.agents
 BRANCH=main
 
-if ! git remote get-url "$REMOTE_NAME" >/dev/null 2>&1; then
-  git remote add "$REMOTE_NAME" "$REMOTE_URL"
-fi
-
+git remote add "$REMOTE_NAME" "$REMOTE_URL"
 git fetch "$REMOTE_NAME"
 git subtree pull --prefix="$PREFIX_DIR" "$REMOTE_NAME" "$BRANCH" --squash
 
