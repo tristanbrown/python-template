@@ -4,7 +4,7 @@ set -euo pipefail
 REMOTE_NAME=agent-instructions
 REMOTE_URL=git@github.com:tristanbrown/agent-instructions.git
 PREFIX_DIR=.agents
-BRANCH=main
+BRANCH=${1:-main}
 
 git remote add "$REMOTE_NAME" "$REMOTE_URL"
 git fetch "$REMOTE_NAME"

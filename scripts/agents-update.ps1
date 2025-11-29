@@ -1,8 +1,9 @@
 Param(
+  [Parameter(Position=0)]
+  [string]$Branch = "main",
   [string]$RemoteName = "agent-instructions",
   [string]$RemoteUrl = "git@github.com:tristanbrown/agent-instructions.git",
-  [string]$PrefixDir = ".agents",
-  [string]$Branch = "main"
+  [string]$PrefixDir = ".agents"
 )
 
 $ErrorActionPreference = 'Stop'
