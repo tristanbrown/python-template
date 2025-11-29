@@ -1,3 +1,9 @@
+# Dev files
+.compare/
+
+# Temporary files
+*~
+.tmp
 .idea
 _build
 .Trash*
