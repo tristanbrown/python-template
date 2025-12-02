@@ -1,5 +1,7 @@
 # Dev files
 .compare/
+.vscode/
+AGENTS.LOCAL.md
 
 # Temporary files
 *~
