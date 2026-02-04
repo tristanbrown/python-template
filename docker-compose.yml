@@ -2,12 +2,5 @@
 ## Access the jupyterlab instance at:
 ## https://${HOSTNAME}:8081/tanspaces.${COMPOSE_PROJECT_NAME}/lab
 
-services:
-  workspace:
-    extends:
-      file: ${JUPYTER_SERVICE}
-      service: jupyter
-
-networks:
-  tanspaces:
-    external: true
+include:
+  - ${JUPYTER_SERVICE}
